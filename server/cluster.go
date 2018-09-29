@@ -119,7 +119,7 @@ type ClusterResp struct {
 }
 
 // Handle outbound node communication: read messages from the channel, forward to remote nodes.
-// FIXME(gene): this will drain the outbound queue in case of a failure: all unprocessed messages will be dropped.
+// TODO(gene): this will drain the outbound queue in case of a failure: all unprocessed messages will be dropped.
 // Maybe it's a good thing, maybe not.
 func (n *ClusterNode) reconnect() {
 	var reconnTicker *time.Ticker
